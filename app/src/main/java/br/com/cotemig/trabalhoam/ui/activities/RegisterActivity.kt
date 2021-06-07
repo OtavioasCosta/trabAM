@@ -16,7 +16,6 @@ import retrofit2.Response
 
 class RegisterActivity : AppCompatActivity() {
 
-    // inicialização tardia do objeto
     lateinit var email: EditText
     lateinit var password: EditText
 

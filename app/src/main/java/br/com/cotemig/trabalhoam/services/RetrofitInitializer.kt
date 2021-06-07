@@ -14,4 +14,10 @@ class RetrofitInitializer {
     fun accountService() : AccountService{
         return retrofit.create(AccountService::class.java)
     }
+
+    private val retrofitMockup = Retrofit.Builder().baseUrl("https://mockup.fluo.app/v1/").addConverterFactory(GsonConverterFactory.create()).build()
+
+    fun serviceArtistas(): ServiceArtistas{
+        return retrofitMockup.create(ServiceArtistas::class.java)
+    }
 }
