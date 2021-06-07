@@ -1,5 +1,5 @@
 package br.com.cotemig.trabalhoam.model
 
 data class ListArtistas (
-    var lista: ArrayList<Artistas>
+    var artistas: ArrayList<Artistas>
 )

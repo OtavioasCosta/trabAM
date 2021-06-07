@@ -1,6 +1,7 @@
 package br.com.cotemig.trabalhoam.ui.activities
 
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,7 @@ class HomeActivity : AppCompatActivity() {
 
         var s = RetrofitInitializer().serviceArtistas()
 
+
         var call = s.obterListaArtistas()
 
         call.enqueue(object : Callback<ListArtistas> {
@@ -36,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
 
                 if(response.code() == 200){
                     response.body()?.let{
-                        mostraLista(it.lista)
+                        mostraLista(it.artistas)
                         //Toast.makeText(this@MainActivity, "Sucesso! Total de registros: " + it.lista.size, Toast.LENGTH_SHORT).show()
                     }
 

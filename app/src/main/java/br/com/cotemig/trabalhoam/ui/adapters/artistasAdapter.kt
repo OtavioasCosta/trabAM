@@ -22,12 +22,9 @@ class artistasAdapter(var context: Context, var artistas: List<Artistas>) : Base
         nome.text = artistas[position].nome
 
         var image = view.findViewById<ImageView>(R.id.img)
-        Glide.with(context).load(artistas[position].imagem).apply(RequestOptions().transform(
+        Glide.with(context).load(artistas[position].imagens).apply(RequestOptions().transform(
             RoundedCorners(200)
         )).into(image)
-
-        var valor = view.findViewById<TextView>(R.id.valor)
-        valor.text = artistas[position].valor.toString()
 
         return view
     }

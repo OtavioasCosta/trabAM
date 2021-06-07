@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface ServiceArtistas {
 
-    @GET("produto")
+    @GET("d6f123e0-e0cc-49c0-9966-13a95447fe4d")
     fun obterListaArtistas(): Call<ListArtistas>
 }
